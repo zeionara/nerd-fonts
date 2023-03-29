@@ -1,15 +1,15 @@
 #!/bin/bash
 
 name=${1:-UbuntuMono}
-filename=fonts/$name.zip
+filename=$name.zip
 
-fonts_root=~/.local/share/fonts
+fonts_root=/usr/share/fonts
 
-mkdir -p "$fonts_root"
+sudo mkdir -p "$fonts_root"
 
-cp "$filename" "$fonts_root"
+sudo cp "fonts/$filename" "$fonts_root"
 cd "$fonts_root"
-unzip -o "$filename"
-rm "$filename"
+sudo unzip -o "$filename"
+sudo rm "$filename"
 
 sudo fc-cache -fv

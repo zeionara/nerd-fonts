@@ -2,8 +2,8 @@
 
 name=${1:-UbuntuMono}
 
-fonts_root=~/.local/share/fonts
+fonts_root=/usr/share/fonts
 
-cp "fonts/$name.ttf" "$fonts_root"
+sudo cp "fonts/$name.ttf" "$fonts_root"
 
 sudo fc-cache -fv
